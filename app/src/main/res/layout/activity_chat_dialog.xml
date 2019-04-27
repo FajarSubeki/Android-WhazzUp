@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatDialogActivity">
+
+    <ListView
+        android:id="@+id/list_chat_dialog"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/chatdialog_adduser"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_add_black_24dp"
+            app:layout_anchor="@id/list_chat_dialog"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/iv_chatdialog"
+        android:layout_width="60dp"
+        android:src="@drawable/ic_user_circleee"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/iv_chatdialog"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/list_chat_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:text="Fajar Subeki"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:text="Walaikumsalam"
+            android:id="@+id/list_chat_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_undread"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

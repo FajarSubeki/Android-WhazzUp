@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".RegisterActivity">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/diagonalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:elevation="10dip"
+        app:shape_arc_position="bottom"
+        app:shape_arc_height="30dp"
+        android:background="@color/colorPrimary"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8dd55c">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:padding="20dp"
+                android:layout_width="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_undraw_mobile_marketing_iqbr"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/rela2"
+        android:layout_below="@id/diagonalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftarkan akun anda"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tv_text"
+            android:id="@+id/et_full_name_rgister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Nama Lengkap"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_below="@id/et_full_name_rgister"
+            android:id="@+id/et_username_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Username"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_password_register"
+            android:layout_below="@id/et_username_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/et_password_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rela2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_toRightOf="@id/tv_dont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppins_medium"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

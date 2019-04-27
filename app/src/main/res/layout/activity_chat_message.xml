@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_height="match_parent"
+    tools:context=".ChatMessageActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/chat_message_toolbar"
+       android:minHeight="?attr/actionBarSize"
+       app:titleTextColor="@color/colorWhite"
+       android:background="@color/colorPrimary"
+       android:layout_width="match_parent"
+       app:titleTextAppearance="@style/Toolbar.TitleText"
+       app:subtitleTextColor="@color/colorWhite"
+       app:subtitleTextAppearance="@font/poppins_medium"
+       android:layout_height="wrap_content"
+       android:theme="@style/ToolbarTheme"/>
+
+    <ImageButton
+        android:id="@+id/emoji_button"
+        android:background="@null"
+        android:src="@drawable/ic_smile"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="4dp"
+        android:layout_width="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="40dp" />
+
+    <ImageButton
+        android:id="@+id/send_button"
+        android:background="@null"
+        android:src="@android:drawable/ic_menu_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+      <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+          android:id="@+id/edt_content"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_toLeftOf="@id/send_button"
+          android:layout_toRightOf="@id/emoji_button"
+          android:imeOptions="actionSend"
+          android:inputType="text"
+          emojicon:emojiconSize="20sp"
+          android:fontFamily="@font/poppins_medium"
+          android:layout_marginBottom="16dp"/>
+
+    <ListView
+        android:stackFromBottom="true"
+        android:id="@+id/list_of_message"
+        android:layout_below="@+id/chat_message_toolbar"
+        android:layout_above="@id/edt_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/dot_loader"
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/list_of_message"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:color_array="@array/dot_colors"
+        app:dot_radius="4dp"
+        app:number_of_dots="3"/>
+
+</RelativeLayout>

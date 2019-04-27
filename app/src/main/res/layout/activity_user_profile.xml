@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/rela3"
+        android:layout_below="@id/diagonalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_user_circlee"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/tv_ganti_foto"
+            android:layout_below="@id/user_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ganti Foto"
+            android:layout_marginTop="3dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tv_ganti_foto"
+            android:id="@+id/et_update_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Nama Lengkap"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_below="@id/et_update_fullname"
+            android:id="@+id/et_update_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            android:inputType="textEmailAddress"
+            app:met_floatingLabel="highlight"
+            android:hint="Email"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_update_phonenumber"
+            android:layout_below="@id/et_update_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            app:met_floatingLabel="highlight"
+            android:inputType="number"
+            android:hint="Nomor Hp"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_update_oldpasword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Password Lama"
+            android:layout_below="@id/et_update_phonenumber"
+            android:inputType="textPassword"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_update_newpasword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            app:met_floatingLabel="highlight"
+            android:hint="Password Baru"
+            android:layout_below="@id/et_update_oldpasword"
+            android:inputType="textPassword"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update Profile"
+            android:textSize="17sp"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kembali"
+            android:textSize="17sp"
+            android:background="@android:color/holo_red_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
